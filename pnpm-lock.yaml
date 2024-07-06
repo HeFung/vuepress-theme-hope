@@ -171,8 +171,8 @@ importers:
         specifier: 14.2.1
         version: 14.2.1(sass@1.77.6)(webpack@5.92.1(esbuild@0.23.0))
       vidstack:
-        specifier: 1.11.24
-        version: 1.11.24
+        specifier: 1.11.25
+        version: 1.11.25
       vue:
         specifier: 3.4.31
         version: 3.4.31(typescript@5.5.3)
@@ -489,8 +489,8 @@ importers:
         specifier: 14.2.1
         version: 14.2.1(sass@1.77.6)(webpack@5.92.1(esbuild@0.23.0))
       vidstack:
-        specifier: 1.11.24
-        version: 1.11.24
+        specifier: 1.11.25
+        version: 1.11.25
       vue:
         specifier: 3.4.31
         version: 3.4.31(typescript@5.5.3)
@@ -2310,6 +2310,15 @@ packages:
   '@eslint/js@8.57.0':
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@floating-ui/core@1.6.4':
+    resolution: {integrity: sha512-a4IowK4QkXl4SCWTGUR0INAfEOX3wtsYw3rKK5InQEHMGObkR8Xk44qYQD9P4r6HHw0iIfK6GUKECmY8sTkqRA==}
+
+  '@floating-ui/dom@1.6.7':
+    resolution: {integrity: sha512-wmVfPG5o2xnKDU4jx/m4w5qva9FWHcnZ8BvzEe90D/RpwsJaTAVYPEPdQ8sbr/N8zZTAHlZUTQdqg8ZUbzHmng==}
+
+  '@floating-ui/utils@0.2.4':
+    resolution: {integrity: sha512-dWO2pw8hhi+WrXq1YJy2yCuWoL20PddgGaqTgVe4cOS9Q6qklXCiA1tJEqX6BEwRNSCP84/afac9hd4MS+zEUA==}
 
   '@gera2ld/jsx-dom@2.2.2':
     resolution: {integrity: sha512-EOqf31IATRE6zS1W1EoWmXZhGfLAoO9FIlwTtHduSrBdud4npYBxYAkv8dZ5hudDPwJeeSjn40kbCL4wAzr8dA==}
@@ -6496,6 +6505,9 @@ packages:
   lit-element@4.0.6:
     resolution: {integrity: sha512-U4sdJ3CSQip7sLGZ/uJskO5hGiqtlpxndsLr6mt3IQIjheg93UKYeGQjWMRql1s/cXNOaRrCzC2FQwjIwSUqkg==}
 
+  lit-html@2.8.0:
+    resolution: {integrity: sha512-o9t+MQM3P4y7M7yNzqAyjp7z+mQGa4NS4CxiyLqFPyFWyc4O+nodLrkrxSaCTrla6M5YOLaT3RpbbqjszB5g3Q==}
+
   lit-html@3.1.4:
     resolution: {integrity: sha512-yKKO2uVv7zYFHlWMfZmqc+4hkmSbFp8jgjdZY9vvR9jr4J8fH6FUMXhr+ljfELgmjpvlF7Z1SJ5n5/Jeqtc9YA==}
 
@@ -8898,6 +8910,10 @@ packages:
     resolution: {integrity: sha512-RTd8hj3FD3ScIizm/JNnWKCaMwt9JVTU8Dgq+aOhzptyA6S+rGjXKbpQatp4GL714SwTjHjDVawCtbUrq4S10w==}
     engines: {node: '>=18'}
 
+  vidstack@1.11.25:
+    resolution: {integrity: sha512-jpYpeTStZUQudY0dsJAtekJ7JRFm6Bpwa0+ISF/DYv+3V0xzF+WY3yunNkfXSJIiow6KowypjpsZceRySjZzVA==}
+    engines: {node: '>=18'}
+
   vinyl-contents@2.0.0:
     resolution: {integrity: sha512-cHq6NnGyi2pZ7xwdHSW1v4Jfnho4TEGtxZHw01cmnc8+i7jgR6bRnED/LbrKan/Q7CvVLbnvA5OepnhbpjBZ5Q==}
     engines: {node: '>=10.13.0'}
@@ -10625,6 +10641,17 @@ snapshots:
       - supports-color
 
   '@eslint/js@8.57.0': {}
+
+  '@floating-ui/core@1.6.4':
+    dependencies:
+      '@floating-ui/utils': 0.2.4
+
+  '@floating-ui/dom@1.6.7':
+    dependencies:
+      '@floating-ui/core': 1.6.4
+      '@floating-ui/utils': 0.2.4
+
+  '@floating-ui/utils@0.2.4': {}
 
   '@gera2ld/jsx-dom@2.2.2':
     dependencies:
@@ -15648,6 +15675,10 @@ snapshots:
       '@lit/reactive-element': 2.0.4
       lit-html: 3.1.4
 
+  lit-html@2.8.0:
+    dependencies:
+      '@types/trusted-types': 2.0.7
+
   lit-html@3.1.4:
     dependencies:
       '@types/trusted-types': 2.0.7
@@ -18224,6 +18255,13 @@ snapshots:
 
   vidstack@1.11.24:
     dependencies:
+      media-captions: 1.0.3
+      unplugin: 1.11.0
+
+  vidstack@1.11.25:
+    dependencies:
+      '@floating-ui/dom': 1.6.7
+      lit-html: 2.8.0
       media-captions: 1.0.3
       unplugin: 1.11.0
 
